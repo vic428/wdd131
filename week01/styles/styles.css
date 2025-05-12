@@ -11,16 +11,13 @@ body {
 /* Header styles */
 header {
     background-color: #333333;
-    padding: 0 25px;
-    color: white;
-    
+    padding: 0 25px;    
+}
+header .header-title h2 {
+    color: #fff;    
 }
 
-.header-content {
-    padding: 20px 0;
-    text-align: left;
-    
-}
+
 
 /* Navigation styles */
 nav {
