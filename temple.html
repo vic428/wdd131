@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Picture Album</title>
+    <link rel="stylesheet" href="./styles/temples.css">
+    <link rel="stylesheet" href="./styles/temples-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="author" content="Archibong Victor">
+    <meta 
+        name="description"
+        content ="This webpage is designed to showcase my ability to build a repsonsive picture album with a repsonsive 
+        navigation menu">
+    <script src="./scripts/temple.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menu-button" aria-label="Toggle menu">☰</button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">Old</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Large</a></li>
+                <li><a href="#">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Temples of the World</h1>
+        <section class="gallery">
+            <figure data-category="old">
+                <img src="images/Saltlake temple.jpeg" alt="Salt Lake Temple" />
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+
+            <figure data-category="new">
+                <img src="./images/Rome-Italy Temple.jpeg" alt="Rome Italy Temple" />
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+
+            <figure data-category="large">
+                <img src="./images/Tokyo-japan Temple.jpeg" alt="Tokyo Japan Temple" />
+                <figcaption>Tokyo Japan Temple</figcaption>
+            </figure>
+
+            <figure data-category="small">
+                <img src="images/Accra-ghana-temple.jpeg" alt="Accra Ghana Temple" />
+                <figcaption>Accra Ghana Temple</figcaption>
+            </figure>
+
+            <figure data-category="old">
+                <img src="images/laie-hawai-temple.jpeg" alt="Laie Hawaii Temple" />
+                <figcaption>Laie Hawaii Temple</figcaption>
+            </figure>
+
+            <figure data-category="new">
+                <img src="images/paris-france-temple.webp" alt="Paris France Temple" />
+                <figcaption>Paris France Temple</figcaption>
+            </figure>
+
+            <figure data-category="large">
+                <img src="images/bangkok-thailand-temple.jpeg" alt="Bangkok Thailand Temple" />
+                <figcaption>Bangkok Thailand Temple</figcaption>
+            </figure>
+
+            <figure data-category="small">
+                <img src="images/Aba-nigeria-temple.jpeg" alt="Aba Nigeria Temple" />
+                <figcaption>Aba Nigeria Temple</figcaption>
+            </figure>
+
+            <figure data-category="large">
+                <img src="images/south-africa-temple.jpeg" alt="Johannesburg South Africa Temple" />
+                <figcaption>Johannesburg South Africa Temple</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Archibong Victor Nkamenyin, Nigeria.</p>
+        <p id="lastModified"></p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* temples-large.css */
+@media screen and (min-width: 768px) {
+  #menu-button {
+    display: none;
+  }
+
+  .navigation {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .navigation li {
+    margin: 0 1rem;
+  }
+
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
