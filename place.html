@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Places</title>
+    <meta name="description" content="This webpage demonstrates the application of the concepts from the learning activities to the design and 
+    development of a web page that describes details of a country's weather, location and other informations regarding the choosen location">
+    <meta name="author" content="Archibong Victor Nkamenyin">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/place.css">
+    <script src="./scripts/place.js" defer></script>
+    
+</head>
+<body>
+  <header>
+    <h1>Abuja</h1>
+  </header>
+
+  <main>
+
+  <!-- Hero image with srcset for responsive loading -->
+    <div class="hero-container">
+      <picture>
+        <source media="(max-width: 600px)" srcset="./week03/images/abuja-default.webp">
+        <source media="(max-width: 1024px)" srcset="./week03/images/abuja-default.webp">
+        <img src="./week03/images/abuja-default.webp" alt="Image of the National Central Mosque in Abuja city">
+      </picture>
+
+      <section class="data-section">
+        <h2>Data</h2>
+        <div class="data-grid">
+          <div class="data-item"><strong>Area:</strong> 587,041 sq km</div>
+          <div class="data-item"><strong>Population:</strong> 27,691,018</div>
+          <div class="data-item"><strong>Capital:</strong> Antananarivo</div>
+          <div class="data-item"><strong>Languages:</strong> Malagasy, French</div>
+          <div class="data-item"><strong>Currency:</strong> Malagasy Ariary</div>
+          <div class="data-item"><strong>Time Zone:</strong> UTC+3</div>
+          <div class="data-item"><strong>Calling Code:</strong> +261</div>
+          <div class="data-item"><strong>Internet TLD:</strong> .mg</div>
+        </div>
+      </section>
+
+      <section class="weather-section">
+        <h2>Weather ⛅</h2>
+        <div class="weather-item"><strong>Temperature:</strong> 10℃</div>
+        <div class="weather-item"><strong>Conditions:</strong> Partly Cloudy</div>
+        <div class="weather-item"><strong>Wind:</strong> 5 km/h</div>
+        <div class="weather-item"><strong>Wind Chill:</strong> 9.8℃</div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="currentyear"></span> 🌸 Archibong Victor Nkamenyin, Nigeria. 🌸</p>
+    <p id="lastModified"></p>
+  </footer>
+    
+</body>
+</html>
