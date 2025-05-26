@@ -52,7 +52,7 @@ header{
 
 .data-grid {
   display: grid;
-  grid-template-columns: repeat(minmax(30px, 1fr));
+  grid-template-columns: minmax(30px, 1fr);
 }
 
 .data-item {
