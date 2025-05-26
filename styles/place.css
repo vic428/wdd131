@@ -6,7 +6,7 @@ body{
 }
 
 header{
-    background-color: green;
+    background-color: rgb(77, 186, 77);
     color: white;
     text-align: center;
     padding: 0.5rem 0;
@@ -93,7 +93,7 @@ header{
 
 /* Footer Styles */
 footer {
-    background-color: green;
+    background-color: rgb(77, 186, 77);
     color: #ecf0f1;
     text-align: center;
     padding: 1.5rem 0;
