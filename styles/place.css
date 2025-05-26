@@ -50,6 +50,11 @@ header{
     margin-left: -25px;
 }
 
+/* Hide the emoticon by default */
+.mobile-emoticon {
+    display: none;
+}
+
 .data-grid {
   display: grid;
   grid-template-columns: minmax(30px, 1fr);
@@ -135,6 +140,12 @@ footer p {
         text-align: center;
         background-color: white;
         color: black;
+    }
+    .mobile-emoticon {
+        display: block;
+        width: 1rem;   /* Adjust as needed */
+        height: 1rem;
+        margin: 0.5rem 0 1rem;
     }
 }
        
