@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Picture Album</title>
+    <link rel="stylesheet" href="./styles/filtered-temples.css">
+    <link rel="stylesheet" href="./styles/filtered-temples-large.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <meta name="author" content="Archibong Victor">
+    <meta 
+        name="description"
+        content ="This webpage is designed to showcase my ability to build a repsonsive picture album with a repsonsive 
+        navigation menu">
+    <script src="/scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <button id="menu-button" aria-label="Toggle menu">☰</button>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#" id="home" class="active">Home</a></li>
+                <li><a href="#" id="old">Old</a></li>
+                <li><a href="#" id="new">New</a></li>
+                <li><a href="#" id="large">Large</a></li>
+                <li><a href="#" id="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Temple</h1>
+        <section class="gallery">
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> Archibong Victor Nkamenyin, Nigeria.</p>
+        <p id="lastModified"></p>
+    </footer>
+    
+</body>
+</html>
