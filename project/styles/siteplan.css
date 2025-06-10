@@ -20,11 +20,7 @@ main {
     padding: 0 10px;
 }
 
-ul{
+ul li{
     list-style-type: none;
 }
 
-.images .img{
-    width: 400;
-    height: 350;
-}
