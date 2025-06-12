@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Review Submission</title>
+    <meta name="description" content="This page would express gratitude to users who complete a review.">
+    <meta name="author" content="Archibong Victor Nkamenyin">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/form.css">
+    
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    
+    <main>
+        <h1>Thank you for your review!</h1>
+        <p id="review-count"></p>
+        <p id="last-submission"></p>
+
+         <!-- Optional: Display values from form -->
+        <p><strong>Product:</strong> <span id="prod"></span></p>
+        <p><strong>Rating:</strong> <span id="rate"></span> stars</p>
+        <p><strong>Features:</strong> <span id="features"></span></p>
+        <p><strong>Comment:</strong> <span id="comment"></span></p>
+         <p><strong>Name:</strong> <span id="uname"></span></p>
+
+         
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🌸 Archibong Victor Nkamenyin, Nigeria. 🌸</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const now = new Date();
+            const formattedDate = now.toLocaleString();
+
+      // Update and store count
+        let count = localStorage.getItem('reviewCount');
+        count = count ? parseInt(count) + 1 : 1;
+        localStorage.setItem('reviewCount', count);
+        localStorage.setItem('lastSubmissionDate', formattedDate);
+
+      // Display data
+        document.getElementById('review-count').textContent = 
+            `You have submitted ${count} review${count > 1 ? 's' : ''} so far.`;
+        document.getElementById('last-submission').textContent = 
+            `Last submitted: ${formattedDate}`;
+
+      // Parse URL params
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('prod').textContent = params.get('product') || '-';
+        document.getElementById('rate').textContent = params.get('rating') || '-';
+        document.getElementById('features').textContent = params.getAll('features').join(', ') || 'None';
+        document.getElementById('comment').textContent = params.get('review') || '(No comment)';
+        document.getElementById('uname').textContent = params.get('name') || '(Anonymous)';
+
+      // Footer date
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
+    });
+  </script>
+    
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description" content="This form would be used to give reviews of specific consumer products.">
+    <meta name="author" content="Archibong Victor Nkamenyin">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/form.css">
+    <script src="/scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <form method="get" action="review.html">
+            <fieldset>
+                <legend>Product Name</legend>
+                <select name="product" id="prod-list" required>
+                    <option value="" disabled selected>Choose a Product &#9662;</option>
+                    <!-- Dynamic options will be added here by javascript -->
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Overall Rating</legend>
+                <div class="overall-rating">
+                    <label>
+                        ★
+                        <br>
+                        <input type="radio" name="rating" id="star1" value="1" required>
+                    </label>
+                    <label>
+                        ★★
+                        <br>
+                        <input type="radio" name="rating" id="star2" value="2">
+                    </label>
+                    <label>
+                        ★★★
+                        <br>
+                        <input type="radio" name="rating" id="star3" value="3">
+                    </label>
+                    <label>
+                        ★★★★
+                        <br>
+                        <input type="radio" name="rating" id="star4" value="4">
+                    </label>
+                    <label>
+                        ★★★★★
+                        <br>
+                        <input type="radio" name="rating" id="star5" value="5">
+                    </label>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Date of Installation</legend>
+                <input type="date" id="install-date" name="install-date" required>
+            </fieldset>
+    
+            <p>which features did you find useful in the product?<br>
+            <em>(Check all that apply)</em>
+            </p>
+
+            <label><input type="checkbox" id="useful-fea" name="features" value="durability"> Durability</label><br>
+            <label><input type="checkbox" id="useful-fea" name="features" value="ease-of-use"> Ease of Use</label><br>
+            <label><input type="checkbox" id="useful-fea" name="features" value="performance"> Performance</label><br>
+            <label><input type="checkbox" id="useful-fea" name="features" value="design"> Design</label><br><br>
+            
+            <fieldset>
+                <legend>Written Review <span class="optional">(Optional)</span></legend>
+                <label><textarea id="review" name="review" rows="4" cols="30"></textarea></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your Name <span class="optional">(Optional)</span></legend>
+                <label><input type="text" id="name" name="name"></label>
+            </fieldset>
+          
+        <input type="submit" value="Post Review">
+  
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🌸 Archibong Victor Nkamenyin, Nigeria. 🌸</p>
+        <p id="lastModified"></p>
+    </footer>
+    
+</body>
+</html>
