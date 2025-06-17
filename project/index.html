@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Website</title>
+  <meta name="description" content="This website is my final project for the semester. It's a personal portfolio website to highlight my service and skills to potential clients needing web building and optimization services">
+   <meta name="author" content="Archibong Victor Nkamenyin">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet"/>
+   <link rel="stylesheet" href="/project/styles/project.css" />
+   <!--boxicon-->
+   <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav__content">
+                <div class="logo"><a href="#">ARCHIBONG</a></div>
+                <label for="check" class="checkbox">
+                    <i class="ri-menu-line"></i>
+                </label>
+                <input type="checkbox" name="check" id="check" />
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Resume</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <!---------Home Section-------->
+        <section class="section">
+            <div class="section__container">
+                <div class="content">
+                    <p class="subtitle">HELLO</p>
+                    <h1 class="title">
+                    I'm <span>Archibong<br />a</span> Web Developer
+                    </h1>
+                    <p class="description">
+                    Welcome to my web developer portfolio! I'm Archibong, a skilled and
+                    creative web developer with a passion for creating beautiful,
+                    responsive, and user-friendly websites. I've worked on a variety of
+                    web projects, ranging from personal blogs to e-commerce platforms.
+                    </p>
+                    <div class="action__btns">
+                        <button class="hire__me">Hire Me</button>
+                        <button class="portfolio">Portfolio</button>
+                    </div>
+                </div>
+
+                <div class="image">
+                    <img id="carousel-image" src="/project/images/profile-image.jpg" alt="profile" />
+                    <div id="carousel-indicators" class="indicators"></div>
+                </div>
+
+            </div>
+        </section>
+
+         <!-------- Services section----->
+        <section class="services">
+            <h2 class="heading">My <span>Services</span></h2>
+            <div id="services-container" class="services-container"></div>
+            <!-- Boxes will be inserted here by JS -->
+        </section>
+
+        <!---------- Resume Section------->
+        <section class="resume active">
+            <div class="resume-container">
+                <div class="resume-box">
+                    <h2>Why Hire Me ?</h2>
+                    <p class="desc">Whether it's building responsive websites, optimizing performance, or crafting a strong brand identity, I focus on delivering results that align with your goals.</p>
+                    <button class="resume-btn">Experience</button>
+                    <button class="resume-btn">Education</button>
+                    <button class="resume-btn">Skills</button>
+                    <button class="resume-btn">About Me</button>
+                </div>
+
+                <div class="resume-box">
+                    <div class="resume-detail experienice active">
+                        <h2 class="heading">My<span> Experience</span></h2>
+                        <p class="desc">I bring a unique blend of creativity, technical expertise, and attention to detail to every project.</p>   
+                    <div class="resume-list">
+                        <div class="rescue-item">
+                            <p class="year">2024 - Present</p>
+                            <h3>Frontend Developer & Brand Strategist</h3>
+                            <p class="company">Archibong Inc</p>
+                            <p>Whether it's building responsive websites, optimizing performance, or crafting a strong brand identity</p>
+                        </div>
+                        <div class="rescue-item">
+                            <p class="year">2022 - 2024</p>
+                            <h3>Jnr Frontend Developer</h3>
+                            <p class="company">Archibong Inc</p>
+                            <p>Whether it's building responsive websites, optimizing performance, or crafting a strong brand identity</p>
+                        </div>
+                        <div class="rescue-item">
+                            <p class="year">2020 - 2022</p>
+                            <h3>Full Time Missionary</h3>
+                            <p class="company">The Church of Jesus Christ of Latter Day Saints</p>
+                            <p>Whether it's building responsive websites, optimizing performance, or crafting a strong brand identity</p>
+                        </div>
+                        <div class="rescue-item">
+                            <p class="year">2022 - 2022</p>
+                            <h3>Full Time Missionary</h3>
+                            <p class="company">The Church of Jesus Christ of Latter Day Saints</p>
+                            <p>Whether it's building responsive websites, optimizing performance, or crafting a strong brand identity</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="resume-detail education">
+                        <h2 class="heading">My<span> Education</span></h2>
+                        <p class="desc">I bring a unique blend of creativity, technical expertise, and attention to detail to every project.</p>   
+                    </div>
+
+                    <div class="resume-detail skills">
+                        <h2 class="heading">My<span> Skills</span></h2>
+                        <p class="desc">I bring a unique blend of creativity, technical expertise, and attention to detail to every project.</p>   
+                    </div>
+
+                    <div class="resume-detail about">
+                        <h2 class="heading">About<span> Me</span></h2>
+                        <p class="desc">I bring a unique blend of creativity, technical expertise, and attention to detail to every project.</p>   
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    
+    </main>
+
+    <footer>
+        
+    </footer>
+    
+
+    
+
+  <script src="/project/scripts/project.js"></script>
+</body>
+</html>
