@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
       box.innerHTML = `
         <div class="icon">
           <i class="${service.icon}"></i>
-          <a href="#"><i class='bxr bx-arrow-left-stroke-circle'></i></a>
+          <a href="index.html"><i class='bxr bx-arrow-left-stroke-circle'></i></a>
         </div>
         <h3>${service.title}</h3>
         <p>${service.description}</p>

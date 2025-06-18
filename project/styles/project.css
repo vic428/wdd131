@@ -316,7 +316,6 @@ ul li a:hover {
 }
 
 .resume-box .resume-btn.active{
-  border-color: var(--primary-color);
   color: var(--extra-light);
   background: var(--primary-color)
 }
