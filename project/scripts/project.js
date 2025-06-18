@@ -31,13 +31,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
   }
 
+  // === Resume Button Toggle ===
+  const resumeBtns = document.querySelectorAll('.resume-btn');
+  resumeBtns.forEach((btn, idx) => {
+    btn.addEventListener('click', () => {
+      const resumeDetails = document.querySelectorAll('.resume-detail');
+      resumeBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      resumeDetails.forEach(detail => detail.classList.remove('active'));
+      resumeDetails[idx].classList.add('active');
+    });
+  });
+
+  // === Footer Info ===
+  const yearEl = document.getElementById("currentyear");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  const lastModifiedEl = document.getElementById("lastModified");
+  if (lastModifiedEl) lastModifiedEl.textContent = "Last Modified: " + document.lastModified;
+
   // === Services Rendering ===
   const services = [
-    {
-      icon: "bx bx-palette",
-      title: "Product Branding",
-      description: "I help businesses build a strong identity for their products through strategic branding. This includes developing a compelling brand name, logo, packaging, messaging, and visual style."
-    },
     {
       icon: "bx bx-computer",
       title: "Web Development",
@@ -62,9 +76,13 @@ document.addEventListener('DOMContentLoaded', () => {
       icon: "bx bx-analyze",
       title: "Google Analytics & Tag Setup",
       description: "I implement Google Analytics and Tag Manager to track user behavior, conversions, and campaign performance effectively."
+    },
+    {
+      icon: "bx bx-paint",
+      title: "Product Branding",
+      description: "I help define your brand identity through cohesive visual elements, brand voice, logo design, and packaging that resonates with your target audience."
     }
   ];
-
 
   const container = document.getElementById("services-container");
   if (container) {
@@ -82,31 +100,4 @@ document.addEventListener('DOMContentLoaded', () => {
       container.appendChild(box);
     });
   }
-
-  // === Resume Button Toggle ===
-  const resumeBtns = document.querySelectorAll('.resume-btn');
-  resumeBtns.forEach((btn, idx) => {
-    btn.addEventListener('click', () => {
-      const resumeDetails = document.querySelectorAll('.resume-detail');
-      resumeBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      resumeDetails.forEach(detail => detail.classList.remove('active'));
-      resumeDetails[idx].classList.add('active');
-    });
-  });
-
-  // === Footer Info ===
-  const yearEl = document.getElementById("currentyear");
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-  const lastModifiedEl = document.getElementById("lastModified");
-  if (lastModifiedEl) lastModifiedEl.textContent = "Last Modified: " + document.lastModified;
 });
-
-
-
-  
-
-  
-
-
