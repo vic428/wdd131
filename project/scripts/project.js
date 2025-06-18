@@ -1,6 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  
-document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contactForm');
 
   if (contactForm) {
@@ -29,10 +27,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   
+  
 
 });
 
-  // Carousel logic
+   // Carousel logic
   const imagePaths = [
     "/project/images/profile-image.jpg",
     "/project/images/profile-image3.jpg"
@@ -46,6 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
       carouselImage.src = imagePaths[currentImageIndex];
     }, 3000);
   }
+
+
+
+
+  
 
   // Services array
   const services = [
@@ -100,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
       container.appendChild(box);
     });
   }
-});
 
 //Toggle the options on the my experience page
 const resumeBtns = document.querySelectorAll('.resume-btn');
