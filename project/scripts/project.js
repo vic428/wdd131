@@ -28,9 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // (other code for carousel and services remains unchanged...)
-});
-
   // Carousel logic
   const imagePaths = [
     "/project/images/profile-image.jpg",
@@ -99,6 +96,11 @@ document.addEventListener('DOMContentLoaded', () => {
       container.appendChild(box);
     });
   }
+
+  
+
+});
+  
 });
 
 //Toggle the options on the my experience page
