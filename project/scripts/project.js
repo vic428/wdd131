@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // === Form Submission Logic ===
   const contactForm = document.getElementById('contactForm');
-
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
@@ -11,34 +11,19 @@ document.addEventListener('DOMContentLoaded', () => {
       const message = contactForm.message.value.trim();
       const subscribe = contactForm.subscribe.checked;
 
-      const formData = {
-        fullName,
-        email,
-        service,
-        message,
-        subscribe
-      };
-
+      const formData = { fullName, email, service, message, subscribe };
       localStorage.setItem('contactFormData', JSON.stringify(formData));
-
-      // ✅ Redirect after saving
       window.location.href = "thankyou.html";
     });
   }
 
-  
-  
-
-});
-
-   // Carousel logic
+  // === Carousel Logic ===
   const imagePaths = [
     "/project/images/profile-image.jpg",
     "/project/images/profile-image3.jpg"
   ];
   let currentImageIndex = 0;
   const carouselImage = document.getElementById('carousel-image');
-
   if (carouselImage) {
     setInterval(() => {
       currentImageIndex = (currentImageIndex + 1) % imagePaths.length;
@@ -46,12 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
   }
 
-
-
-
-  
-
-  // Services array
+  // === Services Rendering ===
   const services = [
     {
       icon: "bx bx-palette",
@@ -85,13 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   ];
 
-  // Render services dynamically
+
   const container = document.getElementById("services-container");
   if (container) {
     services.forEach(service => {
       const box = document.createElement("div");
       box.className = "services-box";
-
       box.innerHTML = `
         <div class="icon">
           <i class="${service.icon}"></i>
@@ -100,35 +79,34 @@ document.addEventListener('DOMContentLoaded', () => {
         <h3>${service.title}</h3>
         <p>${service.description}</p>
       `;
-
       container.appendChild(box);
     });
   }
 
-//Toggle the options on the my experience page
-const resumeBtns = document.querySelectorAll('.resume-btn');
-
-resumeBtns.forEach((btn, idx) => {
-  btn.addEventListener('click', () => {
-    const resumeDetails = document.querySelectorAll('.resume-detail');
-
-    resumeBtns.forEach(btn => {
-      btn.classList.remove('active');
+  // === Resume Button Toggle ===
+  const resumeBtns = document.querySelectorAll('.resume-btn');
+  resumeBtns.forEach((btn, idx) => {
+    btn.addEventListener('click', () => {
+      const resumeDetails = document.querySelectorAll('.resume-detail');
+      resumeBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      resumeDetails.forEach(detail => detail.classList.remove('active'));
+      resumeDetails[idx].classList.add('active');
     });
-    btn.classList.add('active');
-
-    resumeDetails.forEach(detail => {
-      detail.classList.remove('active');
-    });
-    resumeDetails[idx].classList.add('active');
-
   });
 
+  // === Footer Info ===
+  const yearEl = document.getElementById("currentyear");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  const lastModifiedEl = document.getElementById("lastModified");
+  if (lastModifiedEl) lastModifiedEl.textContent = "Last Modified: " + document.lastModified;
 });
 
-// Set current year
-document.getElementById("currentyear").textContent = new Date().getFullYear();
 
-// Set last modified
-document.getElementById("lastModified").textContent =
-  "Last Modified: " + document.lastModified;
+
+  
+
+  
+
+
