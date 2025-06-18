@@ -1,84 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Archibong Victor N. </title>
-    <link rel="stylesheet" href="./styles/base.css">
-    <meta name="author" content="Archibong Victor">
-    <meta 
-        name="description"
-        content ="This webpage is designed to demonstrate prerequisite knowledge of applying HTML 
-        and CSS in the design and development of a home page by Archibong Victor N to fufill the requirements of
-        the WDD 131 - Dynamic Web Fundamentals">
-    
-    <script src="./scripts/getdates.js" defer></script>
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Website</title>
+  <meta name="description" content="This website is my final project for the semester. It's a personal portfolio website to highlight my service and skills to potential clients needing web building and optimization services">
+   <meta name="author" content="Archibong Victor Nkamenyin">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet"/>
+   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="/project/styles/project.css" />
+   <!--boxicon-->
+   <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
 <body>
-  <header>
-    <div class="header-title">
-      <h1>WDD 131: Dynamic Web Fundamentals - <span class="highlight">Archibong Victor Nkamenyin</span></h1>
-    </div>
-    <div class="header-nav">
-      <nav>
-        <ul>
-          <li><a href="https://www.linkedin.com/in/archibong-victor/" class="active">LinkedIn</a></li>
-          <li><a href="https://byupw.instructure.com/">Canvas</a></li>
-          <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/ether/12?lang=eng">Scripture</a></li>
-          <li><a href="#">Final Project</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <header>
+        <nav>
+            <div class="nav__content">
+                <div class="logo"><a href="index.html">ARCHIBONG</a></div>
+                <label for="check" class="checkbox">
+                    <i class="ri-menu-line"></i>
+                </label>
+                <input type="checkbox" name="check" id="check" />
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
 
-  <main>
-    <section class="card">
-      <h2>About Me</h2>
-      <div class="about-container">
-        <div class="about-text">
-          <p> My name is Archibong Victor and I love being addressed as Archibong. I was born in Nigeria West Africa and currently live in Lagos Nigeria. 
-              I'm married to my lovely wife Eka James Victor and we've been blessed with 2 beautiful kids Adrian & Eleanor. I have an educational background in Electrical Electronics Engineering and i'm 
-              currently pursuing a 2nd Degree in Software Development from BYU-Idaho. Currently I work as a Customer Success Manager designated to the BYU-Pathway Mentoring Team and i love my job. 
-          </p>
-          <h3>Toloria, Madagascar</h3>
-          <hr>
-          <div class="location">
-          <img src="images/Nigerian-Flag.webp" alt="Official Flag of Madagascar" width="100" height="60" loading="lazy">
-          <p>
-            <em>Official Flag of Nigeria</em><br>
-                Nigeria is a country located on the western coast of Africa that has a diverse geography, with climates ranging from arid to humid equatorial.
-                Hundreds of languages are spoken in Nigeria, including Yoruba, Igbo, Fula, Hausa, Edo, Ibibio, 
-                Tiv, and English. Nigeria’s capital is Abuja.
-          </p>
-          </div>
-        </div>
-        <div class="about-image">
-          <img src="images/Archi-1.jpg" alt="Photo of Rubia" width="150" height="200" loading="lazy">
-        </div>
-      </div>
-    </section>
-          
-    <section class="card">
-      <h2>Web Dev Resources</h2>
-        <ul>
-          <li><a href="#">Dev.to Community</a></li>
-          <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
-          <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
-          <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
-          <li><a href="https://www.udemy.com/">Udemy</a></li>
-          <li><a href="https://img-c.udemycdn.com/notices/web_carousel_slide/image/3e302a6e-9e6c-497e-9472-af98130e4e1a.jpg">Image Placeholder</a></li>
-        </ul>
-    </section>
-  </main>
+    </header>
 
-  <footer>
-    <p>&copy;<span id="currentyear"></span> Archibong Victor Nkamenyin, Nigeria.</p>
-    <p id="lastModified"></p>
-  </footer>
+    <main>
+        <!---------Home Section-------->
+        <section class="section">
+            <div class="section__container">
+                <div class="content">
+                    <p class="subtitle">HELLO</p>
+                    <h1 class="title">
+                    I'm <span>Archibong<br />a</span> Web Developer
+                    </h1>
+                    <p class="description">
+                    Welcome to my web developer portfolio! I'm Archibong, a skilled and
+                    creative web developer with a passion for creating beautiful,
+                    responsive, and user-friendly websites. I've worked on a variety of
+                    web projects, ranging from personal blogs to e-commerce platforms.
+                    </p>
+                    <div class="action__btns">
+                        <a href="contact.html"><button class="hire__me">Hire Me</button></a>
+                        <a href="portfolio.html"><button class="portfolio">Portfolio</button></a>
+                    </div>
+                </div>
+
+                <div class="image">
+                    <img id="carousel-image" src="/project/images/profile-image.jpg" alt="profile" />
+                    <div id="carousel-indicators" class="indicators"></div>
+                </div>
+
+            </div>
+        </section>
+
+         <!-------- Services section----->
+        <section id="services" class="services">
+            <h2 class="heading">My <span>Services</span></h2>
+            <div id="services-container" class="services-container"></div>
+            <!-- Boxes will be inserted here by JS -->
+        </section>
+
+        <!---------- Resume Section------->
+        <section id="resume" class="resume active">
+            <div class="resume-container">
+                <div class="resume-box">
+                    <h2>Why Hire Me ?</h2>
+                    <p class="desc">Whether it's building responsive websites, optimizing performance, or crafting a strong brand identity, I focus on delivering results that align with your goals.</p>
+                    <button class="resume-btn">Experience</button>
+                    <button class="resume-btn">Education</button>
+                    <button class="resume-btn">Skills</button>
+                    <button class="resume-btn">About Me</button>
+                </div>
+
+                <div class="resume-box">
+                    <div class="resume-detail experienice active">
+                        <h2 class="heading">My<span> Experience</span></h2>
+                        <p class="desc">I bring a unique blend of creativity, technical expertise, and attention to detail to every project.</p>   
+                    <div class="resume-list">
+                        <div class="resume-item">
+                            <p class="year">2024 - Present</p>
+                            <h3>Frontend Developer & Brand Strategist</h3>
+                            <p class="company">Archibong Inc</p>
+                            <p>I craft intuitive, responsive websites that elevate user experience and performance. As a brand strategist,
+                                I build compelling visual identities that connect and convert.</p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="year">2022 - 2024</p>
+                            <h3>Jnr Frontend Developer</h3>
+                            <p class="company">Archibong Inc</p>
+                            <p>I developed responsive and user-friendly web interfaces using modern HTML, CSS, and JavaScript. Passionate 
+                                about clean code and continuous learning to build seamless digital experiences.</p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="year">2020 - 2022</p>
+                            <h3>Freelance Developer</h3>
+                            <p class="company">Varch Enterprises</p>
+                            <p>I designed and built custom websites and web apps tailored to client needs. From concept to deployment, 
+                                I delivered scalable, responsive, and user-focused digital solutions.</p>
+                        </div>
+                        <div class="resume-item">
+                            <p class="year">2019 - 2020</p>
+                            <h3>Intern</h3>
+                            <p class="company">Pentium Paul Global Services</p>
+                            <p>I assisted in building and maintaining responsive websites using HTML, CSS, and JavaScript. 
+                                Contributed to real-world projects while sharpening my development skills</p>
+                        </div>
+                    </div>
+                    </div>
+
+                    <div class="resume-detail education">
+                        <h2 class="heading">My<span> Education</span></h2>
+                        <p class="desc">I bring a unique blend of creativity, technical expertise, and attention to detail to every project.</p>   
+                        <div class="resume-list">
+                            <div class="resume-item">
+                                <p class="year">2023 - Present</p>
+                                <h3>Web & Computer Programming Certificate</h3>
+                                <p class="company">Brigham Young University - Idaho</p>
+                                <p>Whether it's building responsive websites, optimizing performance, or crafting a strong brand identity</p>
+                            </div>
+                            <div class="resume-item">
+                                <p class="year">2022</p>
+                                <h3>Web Development Course</h3>
+                                <p class="company">DayStar Skill Acquisition, Oregun, Ikeja. </p>
+                                <p>Whether it's building responsive websites, optimizing performance, or crafting a strong brand identity</p>
+                            </div>
+                            <div class="resume-item">
+                                <p class="year">2020</p>
+                                <h3>Online Programming Course</h3>
+                                <p class="company">Udemy</p>
+                                <p>Whether it's building responsive websites, optimizing performance, or crafting a strong brand identity</p>
+                            </div>
+                            <div class="resume-item">
+                                <p class="year">2019</p>
+                                <h3>HND Electrical Electronics Engineering</h3>
+                                <p class="company">Abia State Polytechnic, Aba.</p>
+                                <p>Whether it's building responsive websites, optimizing performance, or crafting a strong brand identity</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="resume-detail skills">
+                        <h2 class="heading">My<span> Skills</span></h2>
+                        <p class="desc">I bring a unique blend of creativity, technical expertise, and attention to detail to every project.</p>   
+                        <div class="resume-list">
+                            <div class="resume-item">
+                                <i class='bx  bxl-html5'></i> 
+                                <span>HTML5</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx  bxl-css3'></i> 
+                                <span>CSS3</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx  bxl-javascript j-script'></i> 
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx  bxl-wordpress w-press'></i> 
+                                <span>Wordpress</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx  bxl-react re-act'></i> 
+                                <span>React.Js</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx  bxl-figma fig-ma'></i>  
+                                <span>Figma</span>
+                            </div>
+                            <div class="resume-item">
+                                <i class='bx  bxl-nodejs'></i> 
+                                <span>Node.Js</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="resume-detail about">
+                        <h2 class="heading">About<span> Me</span></h2>
+                        <p class="desc">I bring a unique blend of creativity, technical expertise, and attention to detail to every project.</p>   
+                        <div class="resume-list">
+                            <div class="resume-item">
+                                <p>Name <span> Archibong Victor</span></p>
+                            </div>
+                             <div class="resume-item">
+                                <p>Gender <span> Male</span></p>
+                            </div>
+                            <div class="resume-item">
+                                <p>Status <span> Married</span></p>
+                            </div>
+                            <div class="resume-item">
+                                <p>City <span> Ikeja, Lagos</span></p>
+                            </div>
+                             <div class="resume-item">
+                                <p>Nationality <span> Nigerian</span></p>
+                            </div>
+                            <div class="resume-item">
+                                <p>Experieince <span> 3+ Years</span></p>
+                            </div>
+                             <div class="resume-item">
+                                <p>Full Time <span> Available</span></p>
+                            </div>
+                             <div class="resume-item">
+                                <p>Freelance <span> Available</span></p>
+                            </div>
+                            <div class="resume-item">
+                                <p>Phone <span> (+234) 9079 643 154</span></p>
+                            </div>
+                            <div class="resume-item">
+                                <p>Email<span> victor@hirespringboard.com</span></p>
+                            </div>
+                             <div class="resume-item">
+                                <p>Favorite Team <span> Manchester United</span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
 
     
-</body>
+    </main>
+    <!--Footer code-->
+    <footer class="footer">
+        <div class="footer-info">
+            <p>&copy; <span id="currentyear"></span>🌸 Archibong Victor Nkamenyin, Nigeria.🌸</p>
+            <p id="lastModified"></p>
+        </div> 
+    </footer>
+    
 
+    
+
+  <script src="/project/scripts/project.js"></script>
+</body>
 </html>
