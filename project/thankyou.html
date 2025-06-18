@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You</title>
+  <meta name="description" content="This website is my final project for the semester. It's a personal portfolio website to highlight my service and skills to potential clients needing web building and optimization services">
+   <meta name="author" content="Archibong Victor Nkamenyin">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet"/>
+   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="/project/styles/project.css" />
+   <!--boxicon-->
+   <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav__content">
+                <div class="logo"><a href="index.html">ARCHIBONG</a></div>
+                <label for="check" class="checkbox">
+                    <i class="ri-menu-line"></i>
+                </label>
+                <input type="checkbox" name="check" id="check" />
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <!---------Home Section-------->
+        <div class="thank-you">
+            <h1>Thank You, <span class="user-name" id="user-name">Friend</span>!</h1>
+            <p>Your message has been received. I’ll get back to you as soon as possible.</p>
+            <p id="submission-count"></p>
+            <p id="last-submission"></p>
+            <a href="index.html" class="btn">Back to Home</a>
+        </div>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const now = new Date();
+            const formattedDate = now.toLocaleString();
+
+            // Retrieve stored form data
+            const data = JSON.parse(localStorage.getItem('contactFormData'));
+
+            // Personal greeting
+            if (data && data.fullName) {
+                const firstName = data.fullName.trim().split(" ")[0];
+                document.getElementById('user-name').textContent = firstName || 'Friend';
+            }
+
+            // Track submission count
+            let count = localStorage.getItem('contactCount');
+            count = count ? parseInt(count) + 1 : 1;
+            localStorage.setItem('contactCount', count);
+            localStorage.setItem('lastSubmissionDate', formattedDate);
+
+            // Display count and last submission date if elements exist
+            const countEl = document.getElementById('submission-count');
+            const dateEl = document.getElementById('last-submission');
+
+            if (countEl) {
+                countEl.textContent = `You have submitted this form ${count} time${count > 1 ? 's' : ''}.`;
+            }
+
+            if (dateEl) {
+                dateEl.textContent = `Last submitted on: ${formattedDate}`;
+            }
+
+            // Footer info
+            document.getElementById("currentyear").textContent = new Date().getFullYear();
+            document.getElementById("lastModified").textContent = 
+            `Last Modified: ${document.lastModified}`;
+             });
+      </script>
+
+    </main>
+    <!--Footer code-->
+    <footer class="footer">
+        <div class="footer-info">
+            <p>&copy; <span id="currentyear"></span>🌸 Archibong Victor Nkamenyin, Nigeria.🌸</p>
+            <p id="lastModified"></p>
+        </div> 
+    </footer>
+    
+
+    
+
+  <script src="/project/scripts/project.js"></script>
+</body>
+</html>

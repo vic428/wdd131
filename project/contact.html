@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Website</title>
+  <meta name="description" content="This website is my final project for the semester. It's a personal portfolio website to highlight my service and skills to potential clients needing web building and optimization services">
+   <meta name="author" content="Archibong Victor Nkamenyin">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet"/>
+   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="/project/styles/project.css" />
+   <!--boxicon-->
+   <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav__content">
+                <div class="logo"><a href="index.html">ARCHIBONG</a></div>
+                <label for="check" class="checkbox">
+                    <i class="ri-menu-line"></i>
+                </label>
+                <input type="checkbox" name="check" id="check" />
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+        <!---------Home Section-------->
+        <form id="contactForm" action="thankyou.html" class="contact-form">
+            <fieldset>
+                <legend>Contact Me / Hire My Services</legend>
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Your full name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+                <label for="service">Service Interested In:</label>
+                <select name="service" id="service" required>
+                    <option value="" disabled selected>Select a Service &#9662;</option>
+                    <option value="web-design">Website Design</option>
+                    <option value="frontend-dev">Frontend Development</option>
+                    <option value="wordpress">WordPress Setup</option>
+                    <option value="branding">Branding / Visual Identity</option>
+                    <option value="consultation">Consultation</option>
+                </select>
+
+                <label for="message">Project Brief / Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+
+                <label>
+                    <input type="checkbox" name="subscribe" value="yes"> I’d like to receive occasional updates or offers
+                </label>
+
+                <input type="submit" value="Send Message">
+            </fieldset>
+        </form>
+
+        
+       
+
+    
+    </main>
+    <!--Footer code-->
+    <footer class="footer">
+        <div class="footer-info">
+            <p>&copy; <span id="currentyear"></span>🌸 Archibong Victor Nkamenyin, Nigeria.🌸</p>
+            <p id="lastModified"></p>
+        </div> 
+    </footer>
+    
+
+    
+
+  <script src="/project/scripts/project.js"></script>
+</body>
+</html>

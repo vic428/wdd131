@@ -1,13 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Contact form submission
+  
+document.addEventListener('DOMContentLoaded', () => {
   const contactForm = document.getElementById('contactForm');
+
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      alert('Message sent successfully!');
-      contactForm.reset();
+
+      const fullName = contactForm.fullname.value.trim();
+      const email = contactForm.email.value.trim();
+      const service = contactForm.service.value;
+      const message = contactForm.message.value.trim();
+      const subscribe = contactForm.subscribe.checked;
+
+      const formData = {
+        fullName,
+        email,
+        service,
+        message,
+        subscribe
+      };
+
+      localStorage.setItem('contactFormData', JSON.stringify(formData));
+
+      // ✅ Redirect after saving
+      window.location.href = "thankyou.html";
     });
   }
+
+  // (other code for carousel and services remains unchanged...)
+});
 
   // Carousel logic
   const imagePaths = [
@@ -99,3 +121,10 @@ resumeBtns.forEach((btn, idx) => {
   });
 
 });
+
+// Set current year
+document.getElementById("currentyear").textContent = new Date().getFullYear();
+
+// Set last modified
+document.getElementById("lastModified").textContent =
+  "Last Modified: " + document.lastModified;
