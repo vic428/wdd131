@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // === Carousel Logic ===
   const imagePaths = [
-    "/project/images/profile-image.jpg",
-    "/project/images/profile-image3.jpg"
-  ];
+  "images/profile-image.jpg",
+  "images/profile-image3.jpg"
+];
   let currentImageIndex = 0;
   const carouselImage = document.getElementById('carousel-image');
   if (carouselImage) {
